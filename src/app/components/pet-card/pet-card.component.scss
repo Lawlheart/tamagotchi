@@ -31,18 +31,7 @@
 
 .avatar {
   width: 10rem;
-  height: 8rem;
-  background-size: 190%;
-  background-position: center top;
+  height: 10rem;
+  background-size: 100%;
   margin: 1rem;
-  &.Torasel {
-    background-image: url('/assets/img/grass_by_trxpics.png');
-  }
-  &.Ignish {
-    background-image: url('/assets/img/fire_by_trxpics.png');
-  }
-  &.Aquidin {
-    background-image: url('/assets/img/water_by_trxpics.png');
-    background-size: 275%;
-  }
 }

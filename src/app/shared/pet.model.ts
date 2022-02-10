@@ -14,6 +14,8 @@ export interface PetModel {
   id: number;
   name: string;
   species: string;
+  img: string;
+  alt: string;
   type: string;
   stats?: PetStatsModel;
 }

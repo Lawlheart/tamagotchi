@@ -9,7 +9,7 @@
   box-sizing: border-box;
   background-color: $black-coffee;
   color: $polished-pine;
-  height: 100vh;
+  min-height: 100vh;
   .content {
     padding: 1rem;
   }

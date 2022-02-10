@@ -1,6 +1,6 @@
 <div class="pet-card" [class]="pet.type">
   <span class="title">{{ pet.name }}</span>
-  <div class="avatar" [class]="pet.species"></div>
+  <img class="avatar" [src]="'/assets/img/' + pet.img" [alt]="pet.alt" />
   <p>{{ pet.species }}</p>
   <p>{{ pet.type }}</p>
 </div>
