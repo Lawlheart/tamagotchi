@@ -21,3 +21,22 @@
     background-color: $flame;
   }
 }
+
+
+.avatar {
+  width: 10rem;
+  height: 8rem;
+  background-size: 190%;
+  background-position: center top;
+  margin: 1rem;
+  &.Torasel {
+    background-image: url('https://hydra.loreheart.com/bifrost/eureka/grass_by_trxpics.png');
+  }
+  &.Ignish {
+    background-image: url('https://hydra.loreheart.com/bifrost/eureka/fire_by_trxpics.png');
+  }
+  &.Aquidin {
+    background-image: url('https://hydra.loreheart.com/bifrost/eureka/water_by_trxpics.png');
+    background-size: 260%;
+  }
+}
