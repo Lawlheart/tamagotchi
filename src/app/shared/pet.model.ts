@@ -14,8 +14,15 @@ export interface PetModel {
   id: number;
   name: string;
   species: string;
-  img: string;
-  alt: string;
+  artist?: Artist;
+  img?: string;
+  alt?: string;
   type: string;
   stats?: PetStatsModel;
+}
+
+export interface Artist {
+  name: string;
+  pageUrl?: string;
+  avatarUrl?: string;
 }

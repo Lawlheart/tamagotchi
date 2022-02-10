@@ -3,4 +3,5 @@
   <img class="avatar" [src]="'/assets/img/' + pet.img" [alt]="pet.alt" />
   <p>{{ pet.species }}</p>
   <p>{{ pet.type }}</p>
+  <p>by <a [href]="pet.artist?.pageUrl" target="_blank">{{ pet.artist?.name }}</a></p>
 </div>
