@@ -1,6 +1,6 @@
 export interface PetStateModel {
   pets: PetModel[];
-  active?: number | null;
+  activePet?: number | null;
 }
 
 export interface PetStatsModel {
@@ -11,6 +11,7 @@ export interface PetStatsModel {
 }
 
 export interface PetModel {
+  id: number;
   name: string;
   species: string;
   type: string;

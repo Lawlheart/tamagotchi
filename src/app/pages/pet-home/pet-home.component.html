@@ -1,6 +1,7 @@
-<h1>Fakemon Tamagotchi</h1>
 <div class="starters" *ngIf="pets$ | async as pets">
-  <div class="pet-card starter" *ngFor="let pet of pets">
+  <div class="pet-card starter"
+    *ngFor="let pet of pets"
+    (click)="selectPet(pet)">
     <app-pet-card [pet]="pet"></app-pet-card>
   </div>
 </div>

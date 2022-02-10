@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { LoadPets } from 'src/app/shared/pet.actions';
 
 import { PetModel } from 'src/app/shared/pet.model';
+import { SelectPet } from 'src/app/shared/pet.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pet-home',
@@ -12,18 +13,14 @@ import { PetModel } from 'src/app/shared/pet.model';
 })
 export class PetHomeComponent implements OnInit {
   pets$: Observable<PetModel[]>
-  petData: any;
 
-  constructor(private store: Store) {
-    this.loadPets();
-
+  constructor(private store: Store, private _router: Router) {
     this.pets$ = this.store.select(state => state.pets.pets)
-    this.pets$.subscribe(output => this.petData = output)
   }
 
-  loadPets() {
-    console.log('Loading Pets')
-    this.store.dispatch(new LoadPets());
+  selectPet(pet: PetModel) {
+    this.store.dispatch(new SelectPet(pet));
+    this._router.navigate(['pet-page'])
   }
 
   ngOnInit(): void {

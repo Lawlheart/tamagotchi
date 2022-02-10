@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .pet-card {
+  cursor: pointer;
   font-size: larger;
   font-weight: bold;
   padding: 1rem 2rem;
@@ -10,6 +11,9 @@
   justify-content: center;
   align-items: center;
   color: $black-coffee;
+  .title {
+    font-size: xx-large;
+  }
   p {
     margin: 0;
   }
