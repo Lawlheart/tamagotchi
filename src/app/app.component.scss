@@ -1,0 +1,21 @@
+@import './styles/variables';
+
+.site-container {
+  box-sizing: border-box;
+  background-color: $black-coffee;
+  color: $polished-pine;
+  height: 100vh;
+  .content {
+    padding: 1rem;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $ghost-white;
+}

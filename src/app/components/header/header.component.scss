@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+header {
+  background-color: $eminence;
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+    li {
+      margin: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $ghost-white;
+      }
+    }
+  
+  }
+}

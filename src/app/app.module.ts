@@ -8,6 +8,8 @@ import { PetPageComponent } from './pages/pet-page/pet-page.component';
 import { PetHomeComponent } from './pages/pet-home/pet-home.component';
 import { PetCardComponent } from './components/pet-card/pet-card.component';
 import { PetDetailComponent } from './components/pet-detail/pet-detail.component';
+import { CreditsComponent } from './pages/credits/credits.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PetDetailComponent } from './components/pet-detail/pet-detail.component
     PetPageComponent,
     PetHomeComponent,
     PetCardComponent,
-    PetDetailComponent
+    PetDetailComponent,
+    CreditsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
