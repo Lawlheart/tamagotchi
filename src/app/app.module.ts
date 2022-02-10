@@ -10,6 +10,8 @@ import { PetCardComponent } from './components/pet-card/pet-card.component';
 import { PetDetailComponent } from './components/pet-detail/pet-detail.component';
 import { CreditsComponent } from './pages/credits/credits.component';
 import { HeaderComponent } from './components/header/header.component';
+import { environment } from 'src/environments/environment';
+import { PetState } from './shared/pet.state';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxsModule.forRoot([])
+    NgxsModule.forRoot([PetState], { developmentMode: !environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

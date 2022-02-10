@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.pet-card {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $black-coffee;
+  p {
+    margin: 0;
+  }
+  &.grass {
+    background-color: $mountain-meadow;
+  }
+  &.water {
+    background-color: $queen-blue;
+  }
+  &.fire {
+    background-color: $flame;
+  }
+}

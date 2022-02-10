@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
-import { State } from '@ngxs/store';
+import { State, Action, StateContext } from '@ngxs/store';
 
-import { PetModel } from './pet.model'
+import { PetStateModel } from './pet.model'
+import { LoadPets } from './pet.actions';
+import { defaultPets } from './pet.data';
 
-@State<PetModel[]>({
+@State<PetStateModel>({
   name: 'pets',
-  defaults: [
-    {
-      name: 'Willow',
-      type: 'grass',
-      stats: {
-        hunger: 100,
-        boredom: 100,
-        fatigue: 100,
-        hygiene: 100,
-      }
-    }
-  ]
+  defaults: {
+    pets: [],
+    active: null
+  }
 })
 @Injectable()
-export class PetState {}
+export class PetState {
+  @Action(LoadPets)
+  loadPets(ctx: StateContext<PetStateModel>) {
+    const state = ctx.getState();
+    ctx.setState({
+      ...state,
+      pets: defaultPets
+    });
+  }
+}

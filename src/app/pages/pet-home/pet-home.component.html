@@ -1,1 +1,9 @@
-<p>pet-home works!</p>
+<h1>Fakemon Tamagotchi</h1>
+<div class="starters" *ngIf="pets$ | async as pets">
+  <div class="pet-card starter" *ngFor="let pet of pets">
+    <app-pet-card [pet]="pet"></app-pet-card>
+  </div>
+</div>
+<div>Data: 
+  <pre><code>{{ petData | json}}</code></pre>
+</div>
