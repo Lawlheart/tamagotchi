@@ -7,7 +7,7 @@ import { PetModel } from 'src/app/shared/pet.model';
   styleUrls: ['./pet-card.component.scss']
 })
 export class PetCardComponent implements OnInit {
-  @Input() pet: PetModel;
+  @Input() pet!: PetModel;
 
   constructor() { }
 
